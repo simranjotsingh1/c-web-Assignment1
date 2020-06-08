@@ -1,0 +1,190 @@
+<html>
+<head>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <style>
+
+        .header {
+            height: auto;
+            font-size: 5vw;
+            width: 75%;
+            font-family: ALGERIAN;
+            color: Red;
+            text-align: right;
+            margin-top: 10px;
+            background-color: white;
+            padding: 0px;
+            position: absolute;
+            text-align: center;
+            margin-left: 4%;
+            max-height: 10%;
+        }
+
+        .image {
+            height: auto;
+            width: 50%;
+            max-height: 50%;
+        }
+
+        .nav {
+            background-color: #EBE5D9;
+            font-size: 2vw;
+            font-style: italic;
+            margin-top: 90px;
+            height: 3vw;
+            width: 94.2%;
+            padding-left: 30px;
+            margin-left: 2%;
+            position: relative;
+            text-align: center;
+        }
+
+        .body {
+            margin-top: 1%;
+            margin-left: 2%;
+            font-size: 25px;
+            font-family: Lucida calligraphy;
+            text-align: justify;
+            width: 75%;
+            float: left;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        #Table {
+            padding-left: 20%;
+        }
+
+        .text {
+            font-size: 2vw;
+            font-style: italic;
+        }
+
+        .button {
+            width: 90%;
+            margin: auto;
+            padding-left:15%;
+             text-align: center;
+
+        }
+
+        .footer {
+            background-color: #EBE5D9;
+            font-size: 2vw;
+            font-style: italic;
+            text-align: center;
+            width: 94.2%;
+            margin-left: 2%;
+            bottom: 0;
+            margin-top: 50%;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div>
+        <div class="header"><b>Gallery</b></div>
+        <br>
+        <div class="nav">
+            <a href="gallery.html">Gallery </a>&nbsp;&nbsp;&nbsp;
+            <a href="contact.html"> Contact us </a>&nbsp;&nbsp;&nbsp;
+            <a href="about.html"> About us  </a>&nbsp;&nbsp;&nbsp;
+        </div>
+       
+            <hr>
+            <div class="Button">
+                <button id="b1">Fade Out </button>
+                <button id="b2">Fade In </button>
+                <button id="b3">Fade Toggle </button>
+                <button id="b4">Slide Down</button>
+                <button id="b5">Slide Up</button>
+                <button id="b6">Slide Tog</button>
+                <button id="b7">Stop</button>
+                <button id="b8">Hide</button>
+                <button id="b9">Show</button>
+
+
+                <br><br>
+
+                <div class="body">
+
+
+                    <table id="Table">
+                        <tr>
+                            <th class="image"><img src="~/images/1.jpg"></th>
+                            <th class="image"><img src="~/images/2.jpg"></th>
+                            <th class="image"><img src="~/images/3.jpg"></th>
+                        </tr>
+                        <tr>
+                            <th class="text">Location:Toronto<br>Clicked by:Anderson</th>
+                            <th class="text">Location:America<br>Clicked by:Michel-Strac </th>
+                            <th class="text">Location:Punjab<br>Clicked by:Yuvraj Singh</th>
+                        </tr>
+                        <tr>
+                            <th class="image"><img src="~/images/4.jpg"></th>
+                            <th class="image"><img src="~/images/7.jpg"></th>
+                            <th class="image"><img src="~/images/6.jpg"></th>
+                        </tr>
+                        <tr>
+                            <th class="text">Location:Surrey<br>Clicked by:Peter Anderson</th>
+                            <th class="text">Location:Sydney<br>Clicked by:Maxwell</th>
+                            <th class="text">Location:London<br>Clicked by:Joe-Root</th>
+                        </tr>
+                    </table>
+
+                </div>
+
+            </div>
+        <br>
+
+        <div class="footer">
+            Follow us on
+            <br>
+            <a href="https://www.instagram.com/"><img src="~/images/instagram.jpg" height="30" width="30"></a>
+            <a href="https://www.youtube.com/"><img src="~/images/youtube.png" height="30" width="30"></a>
+            <a href="https://www.facebook.com/"><img src="~/images/fb.png" height="30" width="30"></a>
+        </div>
+
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('#b1').click(function(){
+                $('#Table').fadeOut();
+            });
+            $('#b2').click(function () {
+                $('#Table').fadeIn();
+            });
+              $('#b3').click(function () {
+                    $('#Table').fadeToggle();
+              });
+             $('#b4').click(function () {
+                    $('#Table').slideDown(4000);
+             });
+             $('#b5').click(function () {
+                    $('#Table').slideUp(4000);
+             });
+              $('#b6').click(function () {
+                    $('#Table').slideToggle(3000);
+
+              });
+              $('#b7').click(function () {
+                    $('#Table').stop();
+
+              });
+                $('#b8').click(function () {
+                    $('#Table').hide('slow');
+
+                });
+                $('#b9').click(function () {
+                    $('#Table').show("slow");
+
+                });
+
+        });
+    </script>
+
+</body>
+</html>
